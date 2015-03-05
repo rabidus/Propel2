@@ -76,8 +76,10 @@ class QueryBuilder extends AbstractOMBuilder
     {
         $table = $this->getTable();
         $tableName = $table->getName();
+
         $tableDesc = $table->getDescription();
         $tableDescComment = ($tableDesc == '') ? '' : " *\n * {$tableDesc}\n";
+
         $queryClass = $this->getQueryClassName();
         $modelClass = $this->getObjectClassName();
         $parentClass = $this->getParentClass();

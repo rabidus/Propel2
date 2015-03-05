@@ -236,6 +236,7 @@ class ObjectBuilder extends AbstractObjectBuilder
     {
         $table = $this->getTable();
         $tableName = $table->getName();
+
         $tableDesc = $table->getDescription();
         $tableDescComment = ($tableDesc == '') ? '' : " *\n * {$tableDesc}\n";
 

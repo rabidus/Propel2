@@ -81,6 +81,7 @@ class TableMapBuilder extends AbstractOMBuilder
  * $now
  *";
         }
+
         $script .= "
  * This map class is used by Propel to do runtime db structure discovery.
  * For example, the createSelectSql() method checks the type of a given column used in an
@@ -187,7 +188,7 @@ class " . $this->getUnqualifiedClassName() . " extends TableMap
                     'nbHydrateColumns' => $this->getTable()->getNumColumns() - $this->getTable()->getNumLazyLoadColumns(),
                     'columns' => $this->getTable()->getColumns(),
                     'stringFormat' => $this->getTable()->getDefaultStringFormat(),
-        ) );
+                ) );
     }
 
     /**
@@ -406,7 +407,7 @@ class " . $this->getUnqualifiedClassName() . " extends TableMap
                     'fieldKeysRawColname' => $fieldKeysRawColname,
                     'fieldKeysFieldName' => $fieldKeysFieldName,
                     'fieldKeysNum' => $fieldKeysNum,
-        ) );
+                ) );
     }
 
     /**
@@ -749,7 +750,7 @@ class " . $this->getUnqualifiedClassName() . " extends TableMap
                     'removeInstancePoolKeySnippetObjects' => $removeInstancePoolKeySnippetObjects,
                     'removeInstancePoolKeySnippetPks' => $removeInstancePoolKeySnippetPks,
                     'countPks' => count( $pks )
-        ) );
+                ) );
     }
 
     public function addClearRelatedInstancePool()
@@ -787,7 +788,7 @@ class " . $this->getUnqualifiedClassName() . " extends TableMap
         return $this->renderTemplate( 'tableMapClearRelatedInstancePool', array(
                     'tableName' => $table->getName(),
                     'relatedClassNames' => $relatedClassNames,
-        ) );
+                ) );
     }
 
     /**

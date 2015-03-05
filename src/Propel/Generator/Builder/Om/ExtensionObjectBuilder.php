@@ -44,6 +44,7 @@ class ExtensionObjectBuilder extends AbstractObjectBuilder
         {
             $tableDesc = $table->getDescription();
             $tableDescComment = ($tableDesc == '') ? '' : " *\n * {$tableDesc}\n";
+
             $script .= "
 /**
  * Skeleton subclass for representing a row from the '$tableName' table.

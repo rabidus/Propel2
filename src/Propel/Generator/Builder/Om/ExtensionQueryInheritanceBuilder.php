@@ -85,6 +85,7 @@ class ExtensionQueryInheritanceBuilder extends AbstractOMBuilder
     {
         $table = $this->getTable();
         $tableName = $table->getName();
+
         $tableDesc = $table->getDescription();
         $tableDescComment = ($tableDesc == '') ? '' : " *\n * {$tableDesc}\n";
 
